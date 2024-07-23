@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 3 - Financial Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Step 3: Group 2 Expenses</h1>
+        <form action="/result" method="POST" class="form">
+            <input type="hidden" name="salary" value="{{ salary }}">
+            <input type="hidden" name="profession" value="{{ profession }}">
+            <input type="hidden" name="housing" value="{{ housing }}">
+            <input type="hidden" name="food" value="{{ food }}">
+            <input type="hidden" name="transport" value="{{ transport }}">
+            <label for="bills">Bills</label>
+            <input type="number" step="0.01" name="bills" required>
+            <label for="clothing">Clothing</label>
+            <input type="number" step="0.01" name="clothing" required>
+            <label for="personal_needs">Personal Needs</label>
+            <input type="number" step="0.01" name="personal_needs" required>
+            <label for="debt_repayment">Debt Repayment</label>
+            <input type="number" step="0.01" name="debt_repayment" required>
+            <label for="family_needs">Family Needs</label>
+            <input type="number" step="0.01" name="family_needs" required>
+            <label for="health_insurance">Health Insurance</label>
+            <input type="number" step="0.01" name="health_insurance" required>
+            <label for="entertainment_leisure">Entertainment & Leisure</label>
+            <input type="number" step="0.01" name="entertainment_leisure" required>
+            <label for="expenditure">Expenditure</label>
+            <input type="number" step="0.01" name="expenditure" required>
+            <button type="submit" class="button">Get Results</button>
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>

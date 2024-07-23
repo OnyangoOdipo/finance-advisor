@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 1 - Financial Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Enter Basic Information</h1>
+        <form action="/step2" method="POST" class="form">
+            <label for="salary">Salary</label>
+            <input type="number" step="0.01" name="salary" required>
+            <label for="profession">Profession</label>
+            <select name="profession" required>
+                <option value="Accountant">Accountant</option>
+                <option value="Doctor">Doctor</option>
+                <option value="Engineer">Engineer</option>
+                <option value="Lawyer">Lawyer</option>
+                <option value="Teacher">Teacher</option>
+                <!-- Add more professions as needed -->
+            </select>
+            <button type="submit" class="button">Next</button>
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>

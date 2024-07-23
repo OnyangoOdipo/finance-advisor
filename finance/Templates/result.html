@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Prediction Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Financial Prediction Results</h1>
+        <p class="result">Predicted Expenditure {{ prediction }}</p>
+        <h2 class="subtitle">Financial Advice</h2>
+        <ul class="advice-list">
+            {% for tip in advice %}
+            <li>{{ tip }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
